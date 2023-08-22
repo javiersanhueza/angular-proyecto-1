@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'proyecto-angular';
+  text: any;
+  demo(): void {
+    console.log('esto es una demo');
+  }
 }
