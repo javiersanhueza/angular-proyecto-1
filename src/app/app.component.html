@@ -1,3 +1,5 @@
 <h1>Nueva app</h1>
-<button mat-button color="primary">Primary</button>
-<button mat-button color="accent">Accent</button>
+<app-my-component1 [title]="title" (sendMessage)="getMessage($event)"></app-my-component1>
+{{ messageHijo }}
+<app-my-component2></app-my-component2>
+<button (click)="clickChangeTitle()">CAMBIAR TÍTULO DESDE APP COMPONENT</button>
