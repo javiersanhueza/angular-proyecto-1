@@ -11,7 +11,7 @@ export class AppComponent implements OnInit, DoCheck, AfterViewInit {
   @ViewChild(MyComponent2Component) viewChild: MyComponent2Component | undefined;
   title = "proyecto-angular";
   messageHijo = "";
-  show = false;
+  show = true;
 
   constructor() {
     console.log("**APP-COMPONENT** -> CONSTRUCTOR");
@@ -28,7 +28,7 @@ export class AppComponent implements OnInit, DoCheck, AfterViewInit {
 
   clickChangeTitle(): void {
     this.title = "CAMBIANDO ******";
-    this.show = true;
+    this.show = false;
   }
 
   ngOnInit(): void {

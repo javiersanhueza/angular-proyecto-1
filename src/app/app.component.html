@@ -1,7 +1,7 @@
 <h1>Nueva app</h1>
 <app-my-component1 [title]="title" (sendMessage)="getMessage($event)"></app-my-component1>
 {{ messageHijo }}
-<app-my-component2>
-  <h2 *ngIf="show" #childComponent2>Este es un contenido insertado</h2>
+<app-my-component2 *ngIf="show">
+  <h2 #childComponent2>Este es un contenido insertado</h2>
 </app-my-component2>
 <button (click)="clickChangeTitle()">CAMBIAR TÍTULO DESDE APP COMPONENT</button>
