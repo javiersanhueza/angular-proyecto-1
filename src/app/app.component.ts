@@ -8,6 +8,7 @@ import { Component, DoCheck, OnInit } from "@angular/core";
 export class AppComponent implements OnInit, DoCheck {
   title = "proyecto-angular";
   messageHijo = "";
+  show = false;
 
   constructor() {
     console.log("**APP-COMPONENT** -> CONSTRUCTOR");
@@ -24,6 +25,7 @@ export class AppComponent implements OnInit, DoCheck {
 
   clickChangeTitle(): void {
     this.title = "CAMBIANDO ******";
+    this.show = true;
   }
 
   ngOnInit(): void {

@@ -5,7 +5,8 @@ import {
   OnChanges,
   OnInit,
   SimpleChanges,
-  ContentChild
+  ContentChild,
+  AfterContentChecked
 } from "@angular/core";
 
 @Component({
@@ -13,7 +14,9 @@ import {
   templateUrl: "./my-component2.component.html",
   styleUrls: ["./my-component2.component.scss"]
 })
-export class MyComponent2Component implements OnInit, OnChanges, DoCheck, AfterContentInit {
+export class MyComponent2Component
+  implements OnInit, OnChanges, DoCheck, AfterContentInit, AfterContentChecked
+{
   @ContentChild("childComponent2") contentChild: HTMLElement | undefined;
   ngAfterContentInit(): void {
     console.log("**ngAfterContentInit COMPONENTE 2**");
@@ -29,5 +32,10 @@ export class MyComponent2Component implements OnInit, OnChanges, DoCheck, AfterC
   ngOnInit(): void {
     console.log(this.contentChild);
     console.log("**ngOnInit COMPONENTE 2**");
+  }
+
+  ngAfterContentChecked(): void {
+    console.log("**ngAfterContentChecked COMPONENTE 2**");
+    console.log(this.contentChild);
   }
 }
