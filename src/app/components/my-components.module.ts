@@ -7,6 +7,7 @@ import { MyComponent2Component } from "./my-component2/my-component2.component";
 import { MyComponent3Component } from "./my-component3/my-component3.component";
 import { HerosComponent } from "./heros/heros.component";
 import { MyComponent4Component } from "./my-component4/my-component4.component";
+import { CustomCurrencyPipe } from './custom-currency.pipe';
 
 registerLocaleData(localeEsCl);
 @NgModule({
@@ -15,7 +16,8 @@ registerLocaleData(localeEsCl);
     MyComponent2Component,
     MyComponent3Component,
     MyComponent4Component,
-    HerosComponent
+    HerosComponent,
+    CustomCurrencyPipe
   ],
   providers: [{ provide: LOCALE_ID, useValue: "es-CL" }],
   imports: [CommonModule],

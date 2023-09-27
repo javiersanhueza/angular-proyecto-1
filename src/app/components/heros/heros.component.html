@@ -91,6 +91,12 @@
         <td>{{ myDate }}</td>
         <td>{{ myDate | date: "dd/MM/yyyy" }}</td>
       </tr>
+
+      <tr>
+        <td>Custom currency</td>
+        <td>{{ currencyNumber }}</td>
+        <td>{{ currencyNumber | customCurrency }}</td>
+      </tr>
     </tbody>
   </table>
 </div>
