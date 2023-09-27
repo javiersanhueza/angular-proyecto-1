@@ -14,7 +14,7 @@ export class AppComponent implements OnInit, DoCheck, AfterViewInit {
   show = true;
 
   constructor() {
-    console.log("**APP-COMPONENT** -> CONSTRUCTOR");
+    //console.log("**APP-COMPONENT** -> CONSTRUCTOR");
   }
 
   getMessage(message: string): void {
@@ -32,17 +32,17 @@ export class AppComponent implements OnInit, DoCheck, AfterViewInit {
   }
 
   ngOnInit(): void {
-    console.log("**APP-COMPONENT** -> ngOnInit");
-    console.log(this.viewChild);
+    //console.log("**APP-COMPONENT** -> ngOnInit");
+    //console.log(this.viewChild);
   }
 
   ngDoCheck(): void {
-    console.log("**APP-COMPONENT** -> ngDoCheck");
-    console.log(this.viewChild);
+    //console.log("**APP-COMPONENT** -> ngDoCheck");
+    //console.log(this.viewChild);
   }
 
   ngAfterViewInit(): void {
-    console.log("APP-COMPONENTE -> ngAfterViewInit");
-    console.log(this.viewChild);
+    //console.log("APP-COMPONENTE -> ngAfterViewInit");
+    //console.log(this.viewChild);
   }
 }

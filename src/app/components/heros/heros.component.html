@@ -1,0 +1,19 @@
+<div class="container">
+  <h1 #miH1>Registro de Heroes</h1>
+  La suma de 2 + 2 es igual a {{ getSuma(2, 2) }}
+
+  <input
+    [attr.disabled]="disableInput ? '' : null"
+    type="text"
+    [disabled]="disableInput"
+    (keyup)="keyUp($event)"
+    [attr.maxlength]="getMaxLength()"
+  />
+  {{ title }}
+
+  <app-my-component4 [title]="title"></app-my-component4>
+
+  <button (click)="showMessage()" [class.cambiar-color]="getChangeColor()" [style.color]="color">
+    Guardar
+  </button>
+</div>
