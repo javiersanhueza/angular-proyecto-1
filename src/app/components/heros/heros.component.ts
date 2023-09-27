@@ -1,4 +1,5 @@
 import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from "@angular/core";
+import { formatDate } from "@angular/common";
 
 @Component({
   selector: "app-heros",
@@ -10,6 +11,19 @@ export class HerosComponent implements OnInit, AfterViewInit {
   title = "Hello World";
   disableInput = true;
   color = "blue";
+  decimalPrueba = 0.589;
+  currencyNumber = 1000;
+  myJson = {
+    name: "Javier",
+    age: 30
+  };
+  myDate: Date = new Date();
+
+  myPromise = new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve("esto es una promesa");
+    }, 3000);
+  });
 
   constructor() {}
 
@@ -46,4 +60,6 @@ export class HerosComponent implements OnInit, AfterViewInit {
   getChangeColor() {
     return this.title === "Hello World";
   }
+
+  protected readonly formatDate = formatDate;
 }

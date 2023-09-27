@@ -16,4 +16,82 @@
   <button (click)="showMessage()" [class.cambiar-color]="getChangeColor()" [style.color]="color">
     Guardar
   </button>
+
+  <h3>Pipes</h3>
+
+  <table>
+    <tbody>
+      <tr>
+        <td>Pipe</td>
+        <td>Valor</td>
+        <td>Resultado</td>
+      </tr>
+      <tr>
+        <td>Uppercase</td>
+        <td>{{ title }}</td>
+        <td>{{ title | uppercase }}</td>
+      </tr>
+      <tr>
+        <td>Lowercase</td>
+        <td>{{ title }}</td>
+        <td>{{ title | lowercase }}</td>
+      </tr>
+      <tr>
+        <td>Slice simple</td>
+        <td>{{ title }}</td>
+        <td>{{ title | slice: 5 }}</td>
+      </tr>
+      <tr>
+        <td>Slice 2 parámetros</td>
+        <td>{{ title }}</td>
+        <td>{{ title | slice: 0 : 4 }}</td>
+      </tr>
+      <tr>
+        <td>Slice 2 parámetros, valor final negativo</td>
+        <td>{{ title }}</td>
+        <td>{{ title | slice: 0 : -2 }}</td>
+      </tr>
+      <tr>
+        <td>Decimal Simple</td>
+        <td>{{ decimalPrueba }}</td>
+        <td>{{ decimalPrueba | number }}</td>
+      </tr>
+      <tr>
+        <td>Decimal con decimales</td>
+        <td>{{ decimalPrueba }}</td>
+        <td>{{ decimalPrueba | number: "2.2-2" }}</td>
+      </tr>
+      <tr>
+        <td>Percent simple</td>
+        <td>{{ decimalPrueba }}</td>
+        <td>{{ decimalPrueba | percent }}</td>
+      </tr>
+      <tr>
+        <td>Percent</td>
+        <td>{{ decimalPrueba }}</td>
+        <td>{{ decimalPrueba | percent: "1.2-2" }}</td>
+      </tr>
+      <tr>
+        <td>Currency</td>
+        <td>{{ currencyNumber }}</td>
+        <td>{{ currencyNumber | currency: "CLP" : "symbol" }}</td>
+      </tr>
+      <tr>
+        <td>JSON</td>
+        <td>{{ myJson }}</td>
+        <td>{{ myJson | json }}</td>
+      </tr>
+      <tr>
+        <td>Async</td>
+        <td>{{ myPromise }}</td>
+        <td>{{ myPromise | async }}</td>
+      </tr>
+      <tr>
+        <td>Date</td>
+        <td>{{ myDate }}</td>
+        <td>{{ myDate | date: "dd/MM/yyyy" }}</td>
+      </tr>
+    </tbody>
+  </table>
 </div>
+<br />
