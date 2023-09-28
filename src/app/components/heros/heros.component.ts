@@ -19,11 +19,23 @@ export class HerosComponent implements OnInit, AfterViewInit {
   };
   myDate: Date = new Date();
 
+  miEstiloNgStyle = {
+    color: 'red'
+  }
+
+  miNgClass: boolean = false;
+
   myPromise = new Promise((resolve, reject) => {
     setTimeout(() => {
       resolve("esto es una promesa");
     }, 3000);
   });
+
+  /*
+  * Directivas
+  */
+
+  directivaNgModel: string = 'Hello';
 
   constructor() {}
 
@@ -31,6 +43,7 @@ export class HerosComponent implements OnInit, AfterViewInit {
     setTimeout(() => {
       this.title = "Hello Javier";
       this.disableInput = false;
+      this.miNgClass = true;
     }, 1500);
 
     console.log(this.miH1);

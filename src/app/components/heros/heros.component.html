@@ -6,7 +6,7 @@
     [attr.disabled]="disableInput ? '' : null"
     type="text"
     [disabled]="disableInput"
-    (keyup)="keyUp($event)"
+    [(ngModel)]="directivaNgModel"
     [attr.maxlength]="getMaxLength()"
   />
   {{ title }}
@@ -16,6 +16,8 @@
   <button (click)="showMessage()" [class.cambiar-color]="getChangeColor()" [style.color]="color">
     Guardar
   </button>
+  <label [ngStyle]="miEstiloNgStyle">probando ngStyle</label>
+  <label [ngClass]="{ 'cambiar-color-label': miNgClass }">probando ngClass</label>
 
   <h3>Pipes</h3>
 

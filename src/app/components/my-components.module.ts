@@ -1,5 +1,6 @@
 import { LOCALE_ID, NgModule } from "@angular/core";
 import { CommonModule, registerLocaleData } from "@angular/common";
+import { FormsModule } from '@angular/forms';
 import localeEsCl from "@angular/common/locales/es-CL";
 
 import { MyComponent1Component } from "./my-component1/my-component1.component";
@@ -20,7 +21,7 @@ registerLocaleData(localeEsCl);
     CustomCurrencyPipe
   ],
   providers: [{ provide: LOCALE_ID, useValue: "es-CL" }],
-  imports: [CommonModule],
+  imports: [CommonModule, FormsModule],
   exports: [MyComponent1Component, MyComponent2Component, MyComponent3Component, HerosComponent]
 })
 export class MyComponentsModule {}
