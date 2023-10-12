@@ -20,10 +20,10 @@ export class HerosComponent implements OnInit, AfterViewInit {
   myDate: Date = new Date();
 
   miEstiloNgStyle = {
-    color: 'red'
-  }
+    color: "red"
+  };
 
-  miNgClass: boolean = false;
+  miNgClass = false;
 
   myPromise = new Promise((resolve, reject) => {
     setTimeout(() => {
@@ -32,10 +32,10 @@ export class HerosComponent implements OnInit, AfterViewInit {
   });
 
   /*
-  * Directivas
-  */
+   * Directivas
+   */
 
-  directivaNgModel: string = 'Hello';
+  directivaNgModel = "Hello";
 
   constructor() {}
 
