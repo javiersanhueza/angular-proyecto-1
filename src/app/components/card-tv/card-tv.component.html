@@ -1,0 +1,7 @@
+<mat-card class="card">
+  <span>PERSONALIZA TU TELEVISOR</span>
+  <app-options-tv [isDisabled]="isDisabledButton"></app-options-tv>
+  <button mat-raised-button color="primary" (click)="saveTv()" [disabled]="isDisabledButton">
+    GUARDAR
+  </button>
+</mat-card>

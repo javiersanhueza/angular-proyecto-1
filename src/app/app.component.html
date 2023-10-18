@@ -1,3 +1,13 @@
-<h1>Nueva app</h1>
-<button mat-button color="primary">Primary</button>
-<button mat-button color="accent">Accent</button>
+<div class="container">
+  <div class="container__buttons">
+    <button mat-mini-fab color="accent" aria-label="Example icon button with a menu icon">
+      <mat-icon>add</mat-icon>
+    </button>
+    <mat-icon [matBadge]="countTv" matBadgeColor="warn">desktop_windows</mat-icon>
+  </div>
+  <div class="container__cards">
+    <div *ngFor="let _ of array(); let i = index">
+      <app-card-tv></app-card-tv>
+    </div>
+  </div>
+</div>
